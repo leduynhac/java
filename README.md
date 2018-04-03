@@ -47,3 +47,19 @@ It is a very powerful tool just like <b>Apache's mode_rewrite</b>.<br/>
 <p>
   <b>Step 4:</b> restart Web server and test UrlRewrite installtion via http://127.0.0.1:8080/rewrite-status to see output<br/>
 </p>
+<h2>How to write UrlRewrite</h2>
+<h3>Permanent Redirection</h3>
+<p>
+&lt;rule enabled="true"&gt;<br/>
+    &lt;name&gt;Permanent redirect example&lt;/name&gt;<br/>
+    &lt;from&gt;^/documents.html(.*)$&lt;/from&gt;<br/>
+    &lt;to type="permanent-redirect" last="true"&gt;/file/list/document&lt;/to&gt;<br/>
+&lt;/rule&gt;<br/>
+- This rule is specifically for when you want to do a permanent redirection using the HTTP code 301.<br/>
+- <b>enable="true/false"</b>: enables you to selectively turn on/off this rule without the need to comment it out.<br/>
+- <b>&lt;name&gt;&lt;/name&gt;</b> tags: contains label you wish to use to describe the rule.<br/>
+- <b>&lt;from&gt;&lt;/from&gt;</b> tags: contains a regular expression to forward all requests.<br/>
+- <b>&lt;to&gt;&lt;/to&gt;</b> tags: is the new URL to redirect to.<br/>
+- <b>type="permanent-redirect"</b>: tells URLRewrite to send a permanent redirect code to the browser requesting the URL.<br/>
+- <b>last="true"</b>: tells URLRewrite not to process any further rules for this page request.<br/>
+</p>

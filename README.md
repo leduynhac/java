@@ -27,6 +27,12 @@ It is a very powerful tool just like <b>Apache's mode_rewrite</b>.<br/>
     &lt;filter&gt;<br/>
         &lt;filter-name&gt;UrlRewriteFilter&lt;/filter-name&gt;<br/>
         &lt;filter-class&gt;org.tuckey.web.filters.urlrewrite.UrlRewriteFilter&lt;/filter-class&gt;<br/>
+          &lt;!-- you can disable status page if desired<br/>
+        can be: true, false (default true) --&gt;<br/>
+        &lt;init-param&gt;<br/>
+          &lt;param-name&gt;statusEnabled&lt;/param-name&gt;<br/>
+          &lt;param-value&gt;true&lt;/param-value&gt;<br/>
+        &lt;/init-param&gt;<br/>
     &lt;/filter&gt;<br/>
     &lt;filter-mapping&gt;<br/>
         &lt;filter-name&gt;UrlRewriteFilter&lt;/filter-name&gt;<br/>

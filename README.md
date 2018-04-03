@@ -1,6 +1,12 @@
 # java
 java notes
 
+
+<h1>Nginx as a Reverse-Proxy to Apache Tomcat</h1>
+<p>
+References:<br/>
+- https://devtidbits.com/2015/12/08/nginx-as-a-reverse-proxy-to-apache-tomcat/<br/>
+</p>
 <h1>UrlRewrite</h1>
 <p>
 References:<br/>
